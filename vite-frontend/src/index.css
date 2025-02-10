@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  @apply text-slate-400 bg-gradient-custom;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a5568;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2d3748;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a202c;
+  border-radius: 10px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4a5568 #1a202c;
+}
+
+
+@layer utilities {
+  .bg-home {
+    background-image: url('/bg-home.png');
+  }
+  .bg-gradient-custom {
+    background: linear-gradient(180deg, #01020A -32.5%, #142243 114.17%);
+  }
+  .bg-sidebar {
+    background: rgba(5, 12, 27, 0.3);
+  }
+  .bg-calendar {
+    background: linear-gradient(179.79deg, rgba(11, 19, 36, 0.51) 34.72%, #101B35 101.24%);
+  }
+  .bg-modal {
+    background: linear-gradient(0deg, #11192C, #11192C);
+  }
+  .bg-time-picker {
+    background: rgba(62, 68, 82, 1);
+  }
+  .bg-time-date-picker {
+    background: linear-gradient(0deg, #11192C, #11192C);
+  }
+  .bg-settings {
+    background: linear-gradient(192.31deg, #01020A -49.67%, #142243 89.71%);
+  }
+  .bg-toast {
+    background: linear-gradient(192.31deg, #01020A -49.67%, #142243 89.71%);
+  }
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
