@@ -1,0 +1,39 @@
+services:
+  postgres:
+    image: postgres:alpine
+    container_name: postgres-db
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "password1234"
+      POSTGRES_DB: "ghostik_hub"
+    ports:
+      - "5332:5432"
+    networks:
+      - backend
+  redis:
+    image: redis:alpine
+    container_name: redis-alpine
+    ports:
+      - '6379:6379'
+    networks:
+      - backend
+  minio:
+    image: minio/minio:latest
+    container_name: minio
+    environment:
+      MINIO_ROOT_USER: "admin"
+      MINIO_ROOT_PASSWORD: "!password!"
+    command: server ~/minio --console-address :9090
+    ports:
+      - '9090:9090'
+      - '9000:9000'
+    volumes:
+      - minio-data:/minio
+volumes:
+  data: {}
+  minio-data:
+    driver: local
+
+networks:
+  backend:
+    driver: bridge

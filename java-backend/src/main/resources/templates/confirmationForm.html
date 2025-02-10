@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Template</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .email-container {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    .email-header {
+      background-color: #102130;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .email-header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .email-body {
+      padding: 20px;
+      color: #333;
+      text-align: center;
+    }
+    .email-body p {
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+    .email-footer {
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 10px;
+      font-size: 12px;
+      color: #666;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #102130;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none; /* Removes underline */
+      border-radius: 5px;
+      transition: background-color 0.3s; /* Adds smooth hover effect */
+    }
+    .btn:hover, .btn:focus {
+      background-color: rgba(16, 33, 48, 0.89); /* Darken the button on hover/focus */
+      outline: none; /* Removes focus outline */
+      text-decoration: none; /* Ensures no underline appears on focus */
+    }
+  </style>
+</head>
+<body>
+<div class="email-container">
+  <div class="email-header">
+    <h1>Welcome to GhostikHub!</h1>
+  </div>
+  <div class="email-body">
+    <p>Hi [Recipient's Name],</p>
+    <p>We’re excited to have you on board. GhostikHub is your new go-to platform for your targets and dreams.</p>
+    <p>Please, confirm your email with button below to get started:</p>
+    <a href="[Insert Link Here]" class="btn">Get Started</a>
+  </div>
+  <div class="email-footer">
+    <p>&copy; 2024 Ghostik. All rights reserved.</p>
+  </div>
+</div>
+</body>
+</html>
